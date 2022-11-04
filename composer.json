@@ -1,0 +1,19 @@
+{
+    "name": "realness/php-helper",
+    "description": "Useful PHP functions and classes",
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "Neil",
+            "email": "neil@realnessdigital.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpHelper\\" : "src/"
+        }
+    }
+}
