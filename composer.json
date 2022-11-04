@@ -1,7 +1,8 @@
 {
     "name": "realness/php-helper",
     "description": "Useful PHP functions and classes",
-    "version": "0.1",
+    "version": "0.1.1",
+    "license": "MIT",
     "authors": [
         {
             "name": "Neil",
