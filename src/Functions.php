@@ -4,6 +4,13 @@ namespace PhpHelper;
 class Functions
 {
 
+    /**
+     * The function returns true if the passed $haystack starts from the $needle string or false otherwise.
+     *
+     * @param string $haystack
+     * @param string $needle
+     * @return bool
+     */
     public static function str_starts_with(string $haystack, string $needle)
     {
         if(function_exists('str_starts_with')){
@@ -13,6 +20,13 @@ class Functions
         }
     }
 
+    /**
+     * The function returns true if the passed $haystack ends with the $needle string or false otherwise.
+     *
+     * @param string $haystack
+     * @param string $needle
+     * @return bool
+     */
     public static function str_ends_with(string $haystack, string $needle)
     {
         if(function_exists('str_ends_with')){
@@ -22,6 +36,13 @@ class Functions
         }
     }
 
+    /**
+     * Checks if $needle is found in $haystack and returns a boolean value (true/false) whether or not the $needle was found.
+     *
+     * @param string $haystack
+     * @param string $needle
+     * @return bool
+     */
     public static function str_contains(string $haystack, string $needle): bool
     {
         if(function_exists('str_contains')){
@@ -31,6 +52,14 @@ class Functions
         }
     }
 
+    /**
+     * Replace text within a portion of a string.
+     *
+     * @param $search
+     * @param $replace
+     * @param $subject
+     * @return string
+     */
     public static function str_replace_first($search, $replace, $subject){
         $pos = strpos($subject, $search);
         if($pos !== false) {

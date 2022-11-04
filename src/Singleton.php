@@ -4,18 +4,27 @@ namespace PhpHelper;
 class Singleton
 {
 
-    private static $instance = null;
+    /**
+     * @var static
+     */
+    private static $_instance = null;
+
+    /**
+     * @return static
+     */
     public static function getInstance()
     {
-        if(static::$instance === null) {
-            static::$instance = new static();
+        if(static::$_instance === null) {
+            static::$_instance = new static();
         }
-        return self::$instance;
+        return self::$_instance;
     }
 
     protected function __construct()
     {
-        //
+        if(static::$_instance === null) {
+            static::$_instance = $this;
+        }
     }
 
     protected function __clone()
