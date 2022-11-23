@@ -1,7 +1,7 @@
 <?php
 namespace PhpHelper;
 
-class Singleton
+trait Singleton
 {
 
     /**

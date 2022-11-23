@@ -68,4 +68,24 @@ class Functions
         return $subject;
     }
 
+    /**
+     * @param $cond
+     * @param $if
+     * @param $else
+     * @return mixed
+     */
+    public static function return_if($cond, $if, $else = null){
+        return $cond ? $if : $else;
+    }
+
+    /**
+     * @param $cond
+     * @param $if
+     * @param $else
+     * @return void
+     */
+    public static function echo_if($cond, $if, $else = null){
+        echo static::return_if($cond, $if, $else);
+    }
+
 }
