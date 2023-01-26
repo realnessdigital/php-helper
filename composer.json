@@ -1,7 +1,7 @@
 {
     "name": "realness/php-helper",
     "description": "Useful PHP functions and classes",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "license": "MIT",
     "authors": [
         {
@@ -15,6 +15,9 @@
     "autoload": {
         "psr-4": {
             "PhpHelper\\" : "src/"
-        }
+        },
+        "files": [
+            "functions.php"
+        ]
     }
 }

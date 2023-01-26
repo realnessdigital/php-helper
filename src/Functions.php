@@ -82,10 +82,16 @@ class Functions
      * @param $cond
      * @param $if
      * @param $else
-     * @return void
+     * @return bool
      */
-    public static function echo_if($cond, $if, $else = null){
-        echo static::return_if($cond, $if, $else);
+    public static function echo_if($cond, $if, $else = ''){
+        if($cond){
+            echo $if;
+            return true;
+        } else {
+            echo $else;
+            return false;
+        }
     }
 
 }
